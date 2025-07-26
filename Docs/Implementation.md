@@ -139,11 +139,17 @@ Zlepšit vizuální hiearchii a kontrastz pro lepší čitelnost a dojem profesi
 - [ ] Pridat animovane citace - pro metriky a statistiky
 - [ ] Implementovat lazy loading s skeleton screens
 
-### Stage 8: Dark mode toggle
+### Stage 8: Docker deployment pro Coolify VPS ✅ DOKONČENO
 
-**Cíl:** Přidat dark mode toggle pro uživatele
+**Cíl:** Připravit aplikaci pro deployment na Coolify VPS
 
-- [ ] Přidat dark mode toggle pro uživatele
+- [x] Vytvořit optimalizovaný multi-stage Dockerfile
+- [x] Aktualizovat next.config.ts pro standalone output
+- [x] Vytvořit .dockerignore pro optimalizaci build procesu
+- [x] Připravit docker-compose.yml pro local testing
+- [x] Implementovat health check API endpoint (/api/health)
+- [x] Vytvořit deployment guide (DEPLOYMENT.md)
+- [x] Konfigurace pro production environment variables
 
 ## 📝 Content Strategy
 
@@ -204,6 +210,16 @@ Zlepšit vizuální hiearchii a kontrastz pro lepší čitelnost a dojem profesi
 - Case study "před/po" v Benefits komponentě
 - Emotivní footer s českým původem a mini CTA
 
+**✅ Stage 8 - Docker deployment konfigurace:**
+
+- **Multi-stage Dockerfile** - Optimalizovaný pro produkční deployment
+- **next.config.ts** - Standalone output pro containerizaci
+- **.dockerignore** - Optimalizace Docker build procesu
+- **docker-compose.yml** - Local development a testing
+- **Health check API** - `/api/health` endpoint pro monitoring
+- **DEPLOYMENT.md** - Kompletní guide pro Coolify VPS deployment
+- **Production ready** - Environment variables, security, monitoring
+
 **✅ Styling a UX:**
 
 - Tailwind CSS s custom barvami a komponentami
@@ -216,8 +232,8 @@ Zlepšit vizuální hiearchii a kontrastz pro lepší čitelnost a dojem profesi
 **🔧 Zbývající úkoly (vyžadují manuální dokončení):**
 
 - Cross-browser testování
-- Nasazení na Vercel
+- Nasazení na Coolify VPS (pomocí DEPLOYMENT.md guide)
 - Připojení custom domény
 - Nastavení analytics
 
-_Implementace byla dokončena v 6 fázích. Všechny hlavní funkce a komponenty jsou hotové a funkční. Stage 6 úspěšně přidal vrstvu uživatelské interaktivity, emocí a moderních UX prvků, které výrazně diferencují projekt od běžných landing pages._
+_Implementace byla dokončena v 8 fázích. Všechny hlavní funkce a komponenty jsou hotové a funkční. Projekt je nyní plně připraven pro produkční deployment na Coolify VPS s optimalizovaným Docker kontejnerem, health monitoring a kompletním deployment guide._

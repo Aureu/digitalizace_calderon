@@ -215,22 +215,33 @@ export default function DigitalizationWizard({
 							</div>
 						</div>
 
-						<button
-							onClick={() =>
-								setActiveStep(Math.min(steps.length, activeStep + 1))
-							}
-							disabled={activeStep === steps.length}
-							className={`flex items-center justify-center px-4 py-3 sm:px-6 rounded-lg transition-all duration-300 w-full sm:w-auto text-sm sm:text-base ${
-								activeStep === steps.length
-									? 'bg-brand-primary text-white'
-									: 'bg-brand-primary hover:bg-green-500 text-white'
-							}`}
-						>
-							{activeStep === steps.length
-								? 'Začít digitalizaci'
-								: 'Další krok'}
-							<BusinessIcons.arrow className='w-4 h-4 ml-2' />
-						</button>
+						{activeStep === steps.length ? (
+							<button
+								onClick={() => {
+									const contactSection = document.getElementById('contact');
+									if (contactSection) {
+										contactSection.scrollIntoView({
+											behavior: 'smooth',
+											block: 'start',
+										});
+									}
+								}}
+								className='btn-primary px-6 py-4 text-base sm:text-lg w-full sm:w-auto flex items-center justify-center'
+							>
+								Získat konzultaci zdarma
+								<BusinessIcons.consultation className='w-5 h-5 ml-2' />
+							</button>
+						) : (
+							<button
+								onClick={() =>
+									setActiveStep(Math.min(steps.length, activeStep + 1))
+								}
+								className='btn-primary px-4 py-3 sm:px-6 w-full sm:w-auto text-sm sm:text-base flex items-center justify-center'
+							>
+								Další krok
+								<BusinessIcons.arrow className='w-4 h-4 ml-2' />
+							</button>
+						)}
 					</div>
 				</div>
 			</div>

@@ -3,6 +3,7 @@
 import React from 'react';
 import { BusinessIcons } from './icons/icons';
 import AnimatedIcon from './animations/AnimatedIcon';
+import ScrollAnimation from './animations/ScrollAnimation';
 
 interface BenefitCardProps {
 	icon: string;
@@ -219,99 +220,121 @@ export default function Benefits({ className = '' }: BenefitsProps) {
 
 					<div className='grid md:grid-cols-2 gap-8 max-w-5xl mx-auto'>
 						{/* Before */}
-						<div className='bg-red-50 border border-red-200 rounded-lg p-6'>
-							<div className='flex items-center mb-4'>
-								<div className='w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mr-3'>
+						<div className='bg-red-50 border border-red-200 rounded-lg p-6 h-full flex flex-col'>
+							<div className='flex items-center mb-6'>
+								<div className='w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-4'>
 									<span className='text-red-600 font-bold text-sm'>PŘED</span>
 								</div>
-								<h4 className='font-semibold text-red-800'>
+								<h4 className='font-bold text-red-800 text-lg'>
 									Problémy s dokumenty
 								</h4>
 							</div>
-							<ul className='space-y-3 text-sm text-red-700'>
+							<ul className='space-y-4 text-sm text-red-700 flex-1'>
 								<li className='flex items-start'>
-									<span className='text-red-500 mr-2'>❌</span>
-									<span>5 hodin týdně hledání dokumentů v archívech</span>
+									<span className='text-red-500 mr-3 text-base'>❌</span>
+									<span className='leading-relaxed'>
+										5 hodin týdně hledání dokumentů v archívech
+									</span>
 								</li>
 								<li className='flex items-start'>
-									<span className='text-red-500 mr-2'>❌</span>
-									<span>Ztracené faktury a smlouvy</span>
+									<span className='text-red-500 mr-3 text-base'>❌</span>
+									<span className='leading-relaxed'>
+										Ztracené faktury a smlouvy
+									</span>
 								</li>
 								<li className='flex items-start'>
-									<span className='text-red-500 mr-2'>❌</span>
-									<span>Ruční vyplňování stejných údajů</span>
+									<span className='text-red-500 mr-3 text-base'>❌</span>
+									<span className='leading-relaxed'>
+										Ruční vyplňování stejných údajů
+									</span>
 								</li>
 								<li className='flex items-start'>
-									<span className='text-red-500 mr-2'>❌</span>
-									<span>Chyby v přepisování a výpočtech</span>
+									<span className='text-red-500 mr-3 text-base'>❌</span>
+									<span className='leading-relaxed'>
+										Chyby v přepisování a výpočtech
+									</span>
 								</li>
 								<li className='flex items-start'>
-									<span className='text-red-500 mr-2'>❌</span>
-									<span>Nedostupnost informací mimo kancelář</span>
+									<span className='text-red-500 mr-3 text-base'>❌</span>
+									<span className='leading-relaxed'>
+										Nedostupnost informací mimo kancelář
+									</span>
 								</li>
 							</ul>
 						</div>
 
 						{/* After */}
-						<div className='bg-green-50 border border-green-200 rounded-lg p-6'>
-							<div className='flex items-center mb-4'>
-								<div className='w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3'>
+						<div className='bg-green-50 border border-green-200 rounded-lg p-6 h-full flex flex-col'>
+							<div className='flex items-center mb-6'>
+								<div className='w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4'>
 									<span className='text-green-600 font-bold text-sm'>PO</span>
 								</div>
-								<h4 className='font-semibold text-green-800'>
+								<h4 className='font-bold text-green-800 text-lg'>
 									Digitální efektivita
 								</h4>
 							</div>
-							<ul className='space-y-3 text-sm text-green-700'>
+							<ul className='space-y-4 text-sm text-green-700 flex-1'>
 								<li className='flex items-start'>
-									<span className='text-green-500 mr-2'>✅</span>
-									<span>Vyhledání dokumentu za 10 sekund</span>
+									<span className='text-green-500 mr-3 text-base'>✅</span>
+									<span className='leading-relaxed'>
+										Vyhledání dokumentu za 10 sekund
+									</span>
 								</li>
 								<li className='flex items-start'>
-									<span className='text-green-500 mr-2'>✅</span>
-									<span>Automatické zálohování a archivace</span>
+									<span className='text-green-500 mr-3 text-base'>✅</span>
+									<span className='leading-relaxed'>
+										Automatické zálohování a archivace
+									</span>
 								</li>
 								<li className='flex items-start'>
-									<span className='text-green-500 mr-2'>✅</span>
-									<span>Automatické vyplňování formulářů</span>
+									<span className='text-green-500 mr-3 text-base'>✅</span>
+									<span className='leading-relaxed'>
+										Automatické vyplňování formulářů
+									</span>
 								</li>
 								<li className='flex items-start'>
-									<span className='text-green-500 mr-2'>✅</span>
-									<span>100% přesnost výpočtů a dat</span>
+									<span className='text-green-500 mr-3 text-base'>✅</span>
+									<span className='leading-relaxed'>
+										100% přesnost výpočtů a dat
+									</span>
 								</li>
 								<li className='flex items-start'>
-									<span className='text-green-500 mr-2'>✅</span>
-									<span>Přístup kdekoli, 24/7</span>
+									<span className='text-green-500 mr-3 text-base'>✅</span>
+									<span className='leading-relaxed'>Přístup kdekoli, 24/7</span>
 								</li>
 							</ul>
 						</div>
 					</div>
 
 					{/* Results */}
-					<div className='mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-center'>
-						<div className='bg-white p-4 rounded-lg shadow-sm'>
-							<div className='text-2xl font-bold text-brand-primary mb-1'>
-								75%
+					<div className='mt-8 max-w-5xl mx-auto'>
+						<div className='grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center'>
+							<div className='bg-white p-4 rounded-lg shadow-sm'>
+								<div className='text-2xl font-bold text-brand-primary mb-1'>
+									75%
+								</div>
+								<div className='text-xs text-gray-600'>úspora času</div>
 							</div>
-							<div className='text-xs text-gray-600'>úspora času</div>
-						</div>
-						<div className='bg-white p-4 rounded-lg shadow-sm'>
-							<div className='text-2xl font-bold text-brand-primary mb-1'>
-								€5.2K
+							<div className='bg-white p-4 rounded-lg shadow-sm'>
+								<div className='text-2xl font-bold text-brand-primary mb-1'>
+									€5.2K
+								</div>
+								<div className='text-xs text-gray-600'>měsíční úspory</div>
 							</div>
-							<div className='text-xs text-gray-600'>měsíční úspory</div>
-						</div>
-						<div className='bg-white p-4 rounded-lg shadow-sm'>
-							<div className='text-2xl font-bold text-brand-primary mb-1'>
-								0
+							<div className='bg-white p-4 rounded-lg shadow-sm'>
+								<div className='text-2xl font-bold text-brand-primary mb-1'>
+									0
+								</div>
+								<div className='text-xs text-gray-600'>
+									ztracených dokumentů
+								</div>
 							</div>
-							<div className='text-xs text-gray-600'>ztracených dokumentů</div>
-						</div>
-						<div className='bg-white p-4 rounded-lg shadow-sm'>
-							<div className='text-2xl font-bold text-brand-primary mb-1'>
-								98%
+							<div className='bg-white p-4 rounded-lg shadow-sm'>
+								<div className='text-2xl font-bold text-brand-primary mb-1'>
+									98%
+								</div>
+								<div className='text-xs text-gray-600'>spokojenost týmu</div>
 							</div>
-							<div className='text-xs text-gray-600'>spokojenost týmu</div>
 						</div>
 					</div>
 				</div>
@@ -331,9 +354,9 @@ export default function Benefits({ className = '' }: BenefitsProps) {
 								});
 							}
 						}}
-						className='bg-brand-primary hover:bg-green-500 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-brand-primary focus:ring-opacity-50 shadow-lg hover:shadow-xl'
+						className='btn-primary px-8 py-4 text-lg focus:outline-none focus:ring-4 focus:ring-brand-primary focus:ring-opacity-50'
 					>
-						Začněte digitalizaci
+						Konzultace zdarma
 					</button>
 				</div>
 			</div>

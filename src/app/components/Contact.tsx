@@ -387,10 +387,10 @@ export default function Contact({ className = '' }: ContactProps) {
 							<button
 								type='submit'
 								disabled={isSubmitting}
-								className={`w-full px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-brand-primary focus:ring-opacity-50 ${
+								className={`w-full px-8 py-4 text-lg focus:outline-none focus:ring-4 focus:ring-brand-primary focus:ring-opacity-50 ${
 									isSubmitting
-										? 'bg-gray-400 cursor-not-allowed'
-										: 'bg-brand-primary hover:bg-green-500 text-white transform hover:scale-105 shadow-lg hover:shadow-xl'
+										? 'bg-gray-400 cursor-not-allowed rounded-lg font-semibold transition-all duration-300'
+										: 'btn-primary'
 								}`}
 								aria-label={
 									isSubmitting ? 'Odesílání zprávy...' : 'Odeslat zprávu'

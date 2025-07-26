@@ -85,6 +85,7 @@ body {
   box-shadow: 0 4px 14px 0 rgba(179, 207, 105, 0.25);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateY(0);
+  cursor: pointer;
 }
 
 .btn-primary:hover {
@@ -95,6 +96,90 @@ body {
 
 .btn-primary:active {
   transform: translateY(0);
+}
+
+.btn-secondary {
+  background: var(--brand-primary-light);
+  border: 2px solid var(--brand-primary);
+  border-radius: 0.75rem;
+  color: var(--brand-primary);
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(0);
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: var(--brand-primary);
+  color: white;
+  box-shadow: 0 4px 14px 0 rgba(179, 207, 105, 0.25);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--brand-primary);
+  border-radius: 0.75rem;
+  color: var(--brand-primary);
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(0);
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background: var(--brand-primary);
+  color: white;
+  box-shadow: 0 4px 14px 0 rgba(179, 207, 105, 0.25);
+  transform: translateY(-1px);
+}
+
+/* Cursor Styles for Interactive Elements */
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  opacity: 0.9;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+}
+
+[role="button"] {
+  cursor: pointer;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  cursor: text;
+}
+
+input[type="submit"],
+input[type="button"] {
+  cursor: pointer;
+}
+
+/* Disabled states */
+button:disabled,
+input:disabled,
+[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Link hover states */
+a:hover {
+  opacity: 0.9;
 }
 
 /* Enhanced Card Styles */

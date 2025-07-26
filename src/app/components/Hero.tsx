@@ -3,6 +3,7 @@
 import React from 'react';
 import { ArrowRight, CheckCircle, Clock, Users } from 'lucide-react';
 import TypewriterEffect from './animations/TypewriterEffect';
+import ScrollAnimation from './animations/ScrollAnimation';
 
 interface HeroProps {
 	className?: string;
@@ -25,7 +26,10 @@ export default function Hero({ className = '' }: HeroProps) {
 			className={`bg-white py-20 px-4 ${className}`}
 			aria-label='Úvodní sekce'
 		>
-			<div className='max-w-4xl mx-auto text-center'>
+			<ScrollAnimation
+				animation='fade-up'
+				className='max-w-4xl mx-auto text-center'
+			>
 				{/* Main Heading */}
 				<div className='mb-6 sm:mb-8 max-w-4xl mx-auto'>
 					<h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-high-contrast leading-tight font-black mb-4'>
@@ -60,39 +64,33 @@ export default function Hero({ className = '' }: HeroProps) {
 					aria-label='Přejít na kontaktní formulář'
 				>
 					<span className='flex items-center justify-center gap-3'>
-						Chci digitalizovat
+						Získat konzultaci zdarma
 						<ArrowRight className='w-6 h-6 transform group-hover:translate-x-2 transition-transform duration-300' />
 					</span>
 				</button>
 
 				{/* Trust indicators */}
 				<div className='mt-12 sm:mt-16 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 text-caption text-low-contrast px-4 sm:px-0'>
-					<div className='flex items-center gap-3 group'>
-						<div className='w-8 h-8 bg-brand-primary/10 rounded-full flex items-center justify-center group-hover:bg-brand-primary transition-colors duration-300'>
-							<CheckCircle className='w-4 h-4 text-brand-primary group-hover:text-white transition-colors duration-300' />
+					<div className='flex items-center gap-3'>
+						<div className='w-8 h-8 bg-brand-primary/10 rounded-full flex items-center justify-center'>
+							<CheckCircle className='w-4 h-4 text-brand-primary' />
 						</div>
-						<span className='group-hover:text-medium-contrast transition-colors duration-300 font-medium'>
-							Bezplatná konzultace
-						</span>
+						<span className='font-medium'>Bezplatná konzultace</span>
 					</div>
-					<div className='flex items-center gap-3 group'>
-						<div className='w-8 h-8 bg-brand-primary/10 rounded-full flex items-center justify-center group-hover:bg-brand-primary transition-colors duration-300'>
-							<Clock className='w-4 h-4 text-brand-primary group-hover:text-white transition-colors duration-300' />
+					<div className='flex items-center gap-3'>
+						<div className='w-8 h-8 bg-brand-primary/10 rounded-full flex items-center justify-center'>
+							<Clock className='w-4 h-4 text-brand-primary' />
 						</div>
-						<span className='group-hover:text-medium-contrast transition-colors duration-300 font-medium'>
-							Rychlá implementace
-						</span>
+						<span className='font-medium'>Rychlá implementace</span>
 					</div>
-					<div className='flex items-center gap-3 group'>
-						<div className='w-8 h-8 bg-brand-primary/10 rounded-full flex items-center justify-center group-hover:bg-brand-primary transition-colors duration-300'>
-							<Users className='w-4 h-4 text-brand-primary group-hover:text-white transition-colors duration-300' />
+					<div className='flex items-center gap-3'>
+						<div className='w-8 h-8 bg-brand-primary/10 rounded-full flex items-center justify-center'>
+							<Users className='w-4 h-4 text-brand-primary' />
 						</div>
-						<span className='group-hover:text-medium-contrast transition-colors duration-300 font-medium'>
-							Odborná podpora
-						</span>
+						<span className='font-medium'>Odborná podpora</span>
 					</div>
 				</div>
-			</div>
+			</ScrollAnimation>
 		</section>
 	);
 }

@@ -172,7 +172,7 @@ export default function Footer({ className = '' }: FooterProps) {
 									});
 								}
 							}}
-							className='bg-brand-primary/20 hover:bg-brand-primary text-brand-primary hover:text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105'
+							className='btn-secondary px-6 py-2 rounded-full text-sm'
 						>
 							Začněte digitalizaci dnes 🚀
 						</button>

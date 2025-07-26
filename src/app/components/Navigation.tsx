@@ -70,9 +70,9 @@ export default function Navigation({ className = '' }: NavigationProps) {
 							<Image
 								src='/images/logo_calderon.png'
 								alt='Calderon - Digitalizace firemních procesů'
-								width={120}
-								height={40}
-								className='h-8 w-auto'
+								width={160}
+								height={52}
+								className='h-12 w-auto sm:h-10 md:h-12'
 								priority
 							/>
 						</button>
@@ -97,9 +97,9 @@ export default function Navigation({ className = '' }: NavigationProps) {
 						{/* CTA Button */}
 						<button
 							onClick={() => scrollToSection('contact')}
-							className='bg-brand-primary hover:bg-green-500 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 transform hover:scale-105'
+							className='btn-primary px-4 py-2 text-sm'
 						>
-							Začít nyní
+							Konzultace zdarma
 						</button>
 					</div>
 
@@ -136,9 +136,9 @@ export default function Navigation({ className = '' }: NavigationProps) {
 							{/* Mobile CTA */}
 							<button
 								onClick={() => scrollToSection('contact')}
-								className='w-full mt-4 bg-brand-primary hover:bg-green-500 text-white px-4 py-3 rounded-lg text-sm font-semibold transition-colors duration-200'
+								className='w-full mt-4 btn-primary px-4 py-3 text-sm'
 							>
-								Začít nyní
+								Konzultace zdarma
 							</button>
 						</div>
 					</div>

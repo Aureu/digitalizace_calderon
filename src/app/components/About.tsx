@@ -290,9 +290,9 @@ export default function About({ className = '' }: AboutProps) {
 								});
 							}
 						}}
-						className='bg-brand-primary hover:bg-green-500 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-brand-primary focus:ring-opacity-50'
+						className='btn-primary px-8 py-3 focus:outline-none focus:ring-4 focus:ring-brand-primary focus:ring-opacity-50'
 					>
-						Pojďme si promluvit
+						Konzultace zdarma
 					</button>
 				</div>
 			</div>

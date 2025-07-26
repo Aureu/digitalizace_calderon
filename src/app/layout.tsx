@@ -69,6 +69,22 @@ export const metadata: Metadata = {
 	alternates: {
 		canonical: 'https://calderon.cz',
 	},
+	icons: {
+		icon: [
+			{ url: '/favicon.png', type: 'image/png' },
+			{ url: '/favicon.ico', type: 'image/x-icon' },
+		],
+		apple: [
+			{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+		],
+		other: [
+			{
+				rel: 'mask-icon',
+				url: '/safari-pinned-tab.svg',
+				color: '#b3cf69',
+			},
+		],
+	},
 };
 
 export default function RootLayout({

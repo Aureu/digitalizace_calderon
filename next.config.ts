@@ -10,9 +10,9 @@ const nextConfig: NextConfig = {
 		domains: [],
 	},
 
-	// Experimental features for better performance
+	// Experimental features disabled for Docker compatibility
 	experimental: {
-		optimizeCss: true,
+		// optimizeCss: true, // Disabled - causes issues with missing 'critters' module
 	},
 };
 

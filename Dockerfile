@@ -1,4 +1,4 @@
-# syntax=docker/dockerfile:1
+git # syntax=docker/dockerfile:1
 
 # Base image with Node.js
 FROM node:18-alpine AS base

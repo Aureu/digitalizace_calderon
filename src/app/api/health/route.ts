@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-export async function GET(request: NextRequest) {
+export async function GET(_request: NextRequest) {
 	try {
 		// Simple health check - you can add more sophisticated checks here
 		// For example: database connectivity, external service availability, etc.
@@ -34,10 +34,10 @@ export async function GET(request: NextRequest) {
 }
 
 // Handle HEAD requests for simple health checks
-export async function HEAD(request: NextRequest) {
+export async function HEAD(_request: NextRequest) {
 	try {
 		return new NextResponse(null, { status: 200 });
-	} catch (error) {
+	} catch (_error) {
 		return new NextResponse(null, { status: 503 });
 	}
 }

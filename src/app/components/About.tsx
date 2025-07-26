@@ -151,7 +151,7 @@ export default function About({ className = '' }: AboutProps) {
 
 						{/* Achievements */}
 						<div className='grid grid-cols-2 gap-4'>
-							{achievements.map((achievement, index) => (
+							{achievements.map((achievement, _index) => (
 								<div
 									key={achievement.label}
 									className='text-center p-4 bg-white rounded-lg'
@@ -168,7 +168,7 @@ export default function About({ className = '' }: AboutProps) {
 					</div>
 
 					<div className='space-y-6'>
-						{credentials.map((credential, index) => (
+						{credentials.map((credential, _index) => (
 							<div key={credential.title} className='group'>
 								<Credential
 									icon={credential.icon as keyof typeof BusinessIcons}
@@ -186,7 +186,7 @@ export default function About({ className = '' }: AboutProps) {
 						Náš tým expertů
 					</h3>
 					<div className='grid md:grid-cols-3 gap-8 max-w-4xl mx-auto'>
-						{teamMembers.map((member, index) => (
+						{teamMembers.map((member, _index) => (
 							<TeamMember
 								key={member.name}
 								name={member.name}

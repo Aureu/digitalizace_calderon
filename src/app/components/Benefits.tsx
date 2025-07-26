@@ -179,7 +179,7 @@ export default function Benefits({ className = '' }: BenefitsProps) {
 
 				{/* Testimonials */}
 				<div className='grid md:grid-cols-2 gap-8'>
-					{testimonials.map((testimonial, index) => (
+					{testimonials.map((testimonial, _index) => (
 						<div
 							key={testimonial.company}
 							className='bg-gray-50 p-6 rounded-lg'

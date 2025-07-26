@@ -52,7 +52,7 @@ export default function Navigation({ className = '' }: NavigationProps) {
 
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
-	}, []);
+	}, [navItems]);
 
 	return (
 		<nav

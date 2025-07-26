@@ -22,7 +22,7 @@ export default function AnimatedIcon({
 	className = '',
 }: AnimatedIconProps) {
 	const [isHovered, setIsHovered] = useState(false);
-	const [isInView, setIsInView] = useState(!triggerOnView);
+	const [isInView, _setIsInView] = useState(!triggerOnView);
 
 	const durationClasses = {
 		short: 'duration-200',

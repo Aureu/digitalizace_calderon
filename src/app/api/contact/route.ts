@@ -8,7 +8,7 @@ interface ContactFormData {
 }
 
 // Validation helper
-function validateContactData(data: any): {
+function validateContactData(data: ContactFormData): {
 	isValid: boolean;
 	errors: string[];
 } {
@@ -166,7 +166,7 @@ export async function POST(request: NextRequest) {
 }
 
 // Handle OPTIONS request for CORS
-export async function OPTIONS(request: NextRequest) {
+export async function OPTIONS(_request: NextRequest) {
 	return new NextResponse(null, {
 		status: 200,
 		headers: {

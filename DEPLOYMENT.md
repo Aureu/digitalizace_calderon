@@ -196,6 +196,12 @@ docker build -t test .
 cat .dockerignore
 ```
 
+**Častý problém:** TypeScript not found
+
+- **Příčina:** Next.js potřebuje TypeScript pro build `next.config.ts`
+- **Řešení:** Dockerfile nyní instaluje všechny dependencies (včetně devDependencies)
+- **Ověření:** TypeScript musí být v `package.json` devDependencies
+
 ### Aplikace se nespustí
 
 **Problém:** Container crash

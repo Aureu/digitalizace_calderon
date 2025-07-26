@@ -117,16 +117,16 @@ export default function Benefits({ className = '' }: BenefitsProps) {
 
 	return (
 		<section
-			className={`bg-white py-20 px-4 ${className}`}
+			className={`bg-white py-16 sm:py-20 px-4 ${className}`}
 			aria-label='Výhody digitalizace'
 		>
 			<div className='max-w-6xl mx-auto'>
 				{/* Section Header */}
-				<div className='text-center mb-16'>
-					<h2 className='text-3xl md:text-4xl font-bold text-brand-secondary mb-6'>
+				<div className='text-center mb-12 sm:mb-16'>
+					<h2 className='text-2xl sm:text-3xl md:text-4xl font-bold text-brand-secondary mb-4 sm:mb-6'>
 						Proč digitalizovat vaši firmu?
 					</h2>
-					<p className='text-lg text-gray-600 max-w-3xl mx-auto'>
+					<p className='text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4 sm:px-0 leading-relaxed'>
 						Digitalizace není jen trend, ale nutnost pro konkurenceschopnost v
 						moderním světě. Podívejte se na konkrétní benefity, které přinese
 						vaší firmě.
@@ -134,7 +134,7 @@ export default function Benefits({ className = '' }: BenefitsProps) {
 				</div>
 
 				{/* Benefits Grid */}
-				<div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16'>
+				<div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 sm:mb-16'>
 					{benefits.map((benefit, index) => (
 						<BenefitCard
 							key={benefit.title}

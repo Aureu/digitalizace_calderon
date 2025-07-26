@@ -84,9 +84,9 @@ export default function DigitalTransform({
 			{/* Animation Steps */}
 			<div className='flex items-center justify-between relative'>
 				{/* Connection Lines */}
-				<div className='absolute top-6 left-8 right-8 h-0.5 bg-gray-200'>
+				<div className='absolute top-6 left-8 right-8 h-0.5 bg-gray-200 shadow-sm'>
 					<div
-						className='h-full bg-gradient-to-r from-brand-primary to-green-500 transition-all duration-1000 ease-in-out'
+						className='h-full bg-gradient-to-r from-brand-primary via-green-400 to-green-500 transition-all duration-1000 ease-in-out shadow-sm'
 						style={{
 							width: `${(activeStep / (steps.length - 1)) * 100}%`,
 						}}
@@ -107,7 +107,13 @@ export default function DigitalTransform({
 							<div
 								className={`
                   w-12 h-12 rounded-full flex items-center justify-center transition-all duration-700 ease-out transform
-                  ${isActive ? step.bgColor : 'bg-gray-100'}
+                  ${
+										isActive
+											? step.id === 'process'
+												? 'bg-brand-primary shadow-md'
+												: step.bgColor
+											: 'bg-gray-100'
+									}
                   ${
 										isCurrent
 											? 'scale-110 shadow-lg'
@@ -117,7 +123,7 @@ export default function DigitalTransform({
 									}
                   ${
 										isAnimating && isCurrent
-											? 'ring-2 ring-brand-primary ring-opacity-50'
+											? 'ring-2 ring-white ring-opacity-50'
 											: ''
 									}
                 `}
@@ -125,8 +131,15 @@ export default function DigitalTransform({
 								<Icon
 									className={`
                     w-6 h-6 transition-all duration-700 ease-out
-                    ${isActive ? step.color : 'text-gray-400'}
+                    ${
+											isActive
+												? step.id === 'process'
+													? 'text-white'
+													: step.color
+												: 'text-gray-400'
+										}
                     ${isCurrent && isAnimating ? 'scale-110' : 'scale-100'}
+                    ${step.id === 'process' && isActive ? 'drop-shadow-sm' : ''}
                   `}
 								/>
 							</div>

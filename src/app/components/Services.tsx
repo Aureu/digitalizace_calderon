@@ -75,23 +75,23 @@ export default function Services({ className = '' }: ServicesProps) {
 
 	return (
 		<section
-			className={`bg-gray-50 py-20 px-4 ${className}`}
+			className={`bg-gray-50 py-16 sm:py-20 px-4 ${className}`}
 			aria-label='Naše služby digitalizace'
 		>
 			<div className='max-w-6xl mx-auto'>
 				{/* Section Header */}
-				<div className='text-center mb-16'>
-					<h2 className='text-3xl md:text-4xl font-bold text-brand-secondary mb-6'>
+				<div className='text-center mb-12 sm:mb-16'>
+					<h2 className='text-2xl sm:text-3xl md:text-4xl font-bold text-brand-secondary mb-4 sm:mb-6'>
 						Co digitalizujeme
 					</h2>
-					<p className='text-lg text-gray-600 max-w-2xl mx-auto'>
+					<p className='text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4 sm:px-0'>
 						Zaměřujeme se na tři klíčové oblasti vaší firmy, které nejvíce
 						profitují z digitální transformace
 					</p>
 				</div>
 
 				{/* Services Grid */}
-				<div className='grid md:grid-cols-3 gap-8'>
+				<div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8'>
 					{services.map((service, index) => (
 						<ServiceCard
 							key={service.title}

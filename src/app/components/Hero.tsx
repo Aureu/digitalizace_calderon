@@ -27,9 +27,11 @@ export default function Hero({ className = '' }: HeroProps) {
 		>
 			<div className='max-w-4xl mx-auto text-center'>
 				{/* Main Heading */}
-				<h1 className='text-display md:text-6xl lg:text-7xl text-high-contrast mb-8 max-w-4xl mx-auto'>
-					Zefektivněte chod vaší firmy pomocí{' '}
-					<span className='bg-brand-primary/20 text-brand-secondary px-3 py-1 rounded-lg font-black'>
+				<div className='mb-6 sm:mb-8 max-w-4xl mx-auto'>
+					<h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-high-contrast leading-tight font-black mb-4'>
+						Zefektivněte chod vaší firmy pomocí
+					</h1>
+					<div className='bg-brand-primary/20 text-brand-secondary px-4 py-3 sm:px-6 sm:py-4 rounded-xl inline-block'>
 						<TypewriterEffect
 							words={[
 								'digitalizace',
@@ -40,13 +42,13 @@ export default function Hero({ className = '' }: HeroProps) {
 							typingSpeed={120}
 							deletingSpeed={60}
 							pauseTime={3000}
-							className='min-h-[1.2em] inline-block'
+							className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black'
 						/>
-					</span>
-				</h1>
+					</div>
+				</div>
 
 				{/* Description */}
-				<p className='text-body-large md:text-xl text-medium-contrast mb-10 max-w-3xl mx-auto'>
+				<p className='text-base sm:text-lg md:text-xl text-medium-contrast mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0'>
 					Digitalizujeme dokumenty, procesy a účetnictví. Ušetřete čas a zvyšte
 					efektivitu pomocí moderních řešení.
 				</p>
@@ -54,7 +56,7 @@ export default function Hero({ className = '' }: HeroProps) {
 				{/* CTA Button */}
 				<button
 					onClick={handleCTAClick}
-					className='group btn-primary px-10 py-5 md:px-12 md:py-6 text-lg md:text-xl focus:outline-none focus:ring-4 focus:ring-brand-primary focus:ring-opacity-50'
+					className='group btn-primary px-8 py-4 sm:px-10 sm:py-5 md:px-12 md:py-6 text-base sm:text-lg md:text-xl focus:outline-none focus:ring-4 focus:ring-brand-primary focus:ring-opacity-50 w-full sm:w-auto max-w-sm sm:max-w-none mx-auto'
 					aria-label='Přejít na kontaktní formulář'
 				>
 					<span className='flex items-center justify-center gap-3'>
@@ -64,7 +66,7 @@ export default function Hero({ className = '' }: HeroProps) {
 				</button>
 
 				{/* Trust indicators */}
-				<div className='mt-16 flex flex-col sm:flex-row items-center justify-center gap-8 text-caption text-low-contrast'>
+				<div className='mt-12 sm:mt-16 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 text-caption text-low-contrast px-4 sm:px-0'>
 					<div className='flex items-center gap-3 group'>
 						<div className='w-8 h-8 bg-brand-primary/10 rounded-full flex items-center justify-center group-hover:bg-brand-primary transition-colors duration-300'>
 							<CheckCircle className='w-4 h-4 text-brand-primary group-hover:text-white transition-colors duration-300' />

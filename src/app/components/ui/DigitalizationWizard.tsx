@@ -138,21 +138,21 @@ export default function DigitalizationWizard({
 							}`}
 							style={{ display: activeStep === step.id ? 'block' : 'none' }}
 						>
-							<div className='grid md:grid-cols-2 gap-8 items-center'>
+							<div className='grid lg:grid-cols-2 gap-6 lg:gap-8 items-start lg:items-center'>
 								{/* Icon and Title */}
-								<div className='text-center md:text-left'>
-									<div className='w-24 h-24 bg-gradient-to-br from-brand-primary to-green-500 rounded-full flex items-center justify-center mx-auto md:mx-0 mb-6 shadow-lg transform hover:scale-110 transition-transform duration-300'>
+								<div className='text-center lg:text-left order-1 lg:order-1'>
+									<div className='w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-brand-primary to-green-500 rounded-full flex items-center justify-center mx-auto lg:mx-0 mb-4 sm:mb-6 shadow-lg transform hover:scale-110 transition-transform duration-300'>
 										{React.createElement(BusinessIcons[step.icon], {
-											className: 'w-12 h-12 text-white',
+											className: 'w-10 h-10 sm:w-12 sm:h-12 text-white',
 										})}
 									</div>
-									<h3 className='text-2xl font-bold text-brand-secondary mb-4'>
+									<h3 className='text-xl sm:text-2xl font-bold text-brand-secondary mb-3 sm:mb-4 px-4 sm:px-0'>
 										{step.title}
 									</h3>
-									<p className='text-gray-600 mb-6 leading-relaxed'>
+									<p className='text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 leading-relaxed px-4 sm:px-0'>
 										{step.description}
 									</p>
-									<div className='inline-flex items-center px-4 py-2 bg-brand-primary/10 rounded-full'>
+									<div className='inline-flex items-center px-3 py-2 sm:px-4 bg-brand-primary/10 rounded-full'>
 										<BusinessIcons.hours className='w-4 h-4 text-brand-primary mr-2' />
 										<span className='text-brand-primary font-medium text-sm'>
 											{step.timeframe}
@@ -161,17 +161,19 @@ export default function DigitalizationWizard({
 								</div>
 
 								{/* Details */}
-								<div>
-									<h4 className='font-semibold text-brand-secondary mb-4'>
+								<div className='order-2 lg:order-2 px-4 sm:px-0'>
+									<h4 className='font-semibold text-brand-secondary mb-4 text-base sm:text-lg'>
 										Co v tomto kroku děláme:
 									</h4>
-									<ul className='space-y-3'>
+									<ul className='space-y-3 sm:space-y-4'>
 										{step.details.map((detail, index) => (
 											<li key={index} className='flex items-start'>
 												<div className='w-6 h-6 bg-brand-primary/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 mr-3'>
 													<BusinessIcons.success className='w-3 h-3 text-brand-primary' />
 												</div>
-												<span className='text-gray-700'>{detail}</span>
+												<span className='text-gray-700 text-sm sm:text-base leading-relaxed'>
+													{detail}
+												</span>
 											</li>
 										))}
 									</ul>
@@ -182,41 +184,54 @@ export default function DigitalizationWizard({
 				</div>
 
 				{/* Navigation Buttons */}
-				<div className='flex justify-between items-center mt-8'>
-					<button
-						onClick={() => setActiveStep(Math.max(1, activeStep - 1))}
-						disabled={activeStep === 1}
-						className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
-							activeStep === 1
-								? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-								: 'bg-gray-200 hover:bg-gray-300 text-gray-700'
-						}`}
-					>
-						<BusinessIcons.arrow className='w-4 h-4 mr-2 transform rotate-180' />
-						Předchozí krok
-					</button>
-
-					<div className='text-center'>
+				<div className='mt-6 sm:mt-8'>
+					{/* Time indicator - centered on mobile, inline on desktop */}
+					<div className='text-center mb-6 sm:hidden'>
 						<div className='text-sm text-gray-500 mb-1'>Celková doba</div>
 						<div className='text-lg font-bold text-brand-primary'>
 							5-8 týdnů
 						</div>
 					</div>
 
-					<button
-						onClick={() =>
-							setActiveStep(Math.min(steps.length, activeStep + 1))
-						}
-						disabled={activeStep === steps.length}
-						className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
-							activeStep === steps.length
-								? 'bg-brand-primary text-white'
-								: 'bg-brand-primary hover:bg-green-500 text-white'
-						}`}
-					>
-						{activeStep === steps.length ? 'Začít digitalizaci' : 'Další krok'}
-						<BusinessIcons.arrow className='w-4 h-4 ml-2' />
-					</button>
+					<div className='flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0'>
+						<button
+							onClick={() => setActiveStep(Math.max(1, activeStep - 1))}
+							disabled={activeStep === 1}
+							className={`flex items-center justify-center px-4 py-3 sm:px-6 rounded-lg transition-all duration-300 w-full sm:w-auto text-sm sm:text-base ${
+								activeStep === 1
+									? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+									: 'bg-gray-200 hover:bg-gray-300 text-gray-700'
+							}`}
+						>
+							<BusinessIcons.arrow className='w-4 h-4 mr-2 transform rotate-180' />
+							Předchozí krok
+						</button>
+
+						{/* Time indicator - hidden on mobile, visible on desktop */}
+						<div className='text-center hidden sm:block'>
+							<div className='text-sm text-gray-500 mb-1'>Celková doba</div>
+							<div className='text-lg font-bold text-brand-primary'>
+								5-8 týdnů
+							</div>
+						</div>
+
+						<button
+							onClick={() =>
+								setActiveStep(Math.min(steps.length, activeStep + 1))
+							}
+							disabled={activeStep === steps.length}
+							className={`flex items-center justify-center px-4 py-3 sm:px-6 rounded-lg transition-all duration-300 w-full sm:w-auto text-sm sm:text-base ${
+								activeStep === steps.length
+									? 'bg-brand-primary text-white'
+									: 'bg-brand-primary hover:bg-green-500 text-white'
+							}`}
+						>
+							{activeStep === steps.length
+								? 'Začít digitalizaci'
+								: 'Další krok'}
+							<BusinessIcons.arrow className='w-4 h-4 ml-2' />
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>

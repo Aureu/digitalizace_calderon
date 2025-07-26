@@ -61,22 +61,22 @@ export default function Contact({ className = '' }: ContactProps) {
 	return (
 		<section
 			id='contact'
-			className={`bg-white py-20 px-4 ${className}`}
+			className={`bg-white py-16 sm:py-20 px-4 ${className}`}
 			aria-label='Kontaktní formulář'
 		>
 			<div className='max-w-6xl mx-auto'>
 				{/* Section Header */}
-				<div className='text-center mb-12'>
-					<h2 className='text-3xl md:text-4xl font-bold text-brand-secondary mb-6'>
+				<div className='text-center mb-8 sm:mb-12'>
+					<h2 className='text-2xl sm:text-3xl md:text-4xl font-bold text-brand-secondary mb-4 sm:mb-6'>
 						Kontaktujte nás
 					</h2>
-					<p className='text-lg text-gray-600'>
+					<p className='text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4 sm:px-0'>
 						Vyplňte formulář a my se vám ozveme do 24 hodin s nezávaznou
 						konzultací
 					</p>
 				</div>
 
-				<div className='grid lg:grid-cols-2 gap-12'>
+				<div className='grid lg:grid-cols-2 gap-8 sm:gap-12'>
 					{/* Contact Information */}
 					<div className='lg:order-1'>
 						<h3 className='text-xl font-semibold text-brand-secondary mb-6'>
@@ -226,7 +226,7 @@ export default function Contact({ className = '' }: ContactProps) {
 						{/* Contact Form */}
 						<form
 							onSubmit={handleSubmit(onSubmit)}
-							className='space-y-6'
+							className='space-y-4 sm:space-y-6'
 							noValidate
 						>
 							{/* Name Field */}

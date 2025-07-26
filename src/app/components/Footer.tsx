@@ -13,12 +13,12 @@ export default function Footer({ className = '' }: FooterProps) {
 
 	return (
 		<footer
-			className={`bg-brand-secondary text-white py-12 px-4 ${className}`}
+			className={`bg-brand-secondary text-white py-8 sm:py-12 px-4 ${className}`}
 			aria-label='Zápatí stránky'
 		>
 			<div className='max-w-6xl mx-auto'>
 				{/* Main Footer Content */}
-				<div className='grid md:grid-cols-3 gap-8 mb-8'>
+				<div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8'>
 					{/* Company Info */}
 					<div>
 						<div className='mb-4'>

@@ -133,3 +133,48 @@ body {
 .text-low-contrast {
   color: var(--gray-600);
 }
+
+/* Responsive Utilities */
+@media (max-width: 640px) {
+  .mobile-optimized {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .mobile-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .mobile-spacing {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .tablet-optimized {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+/* Touch-friendly interactions */
+@media (pointer: coarse) {
+  .touch-friendly {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .touch-friendly button {
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* High DPI screens */
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 2dppx) {
+  .retina-optimized {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}

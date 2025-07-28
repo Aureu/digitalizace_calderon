@@ -129,12 +129,16 @@ export default function Footer({ className = '' }: FooterProps) {
 							<div className='flex items-start group'>
 								<BusinessIcons.location className='w-4 h-4 mr-3 mt-1 text-brand-primary group-hover:scale-110 transition-transform duration-300' />
 								<span>
-									Květinová 127, Svádov
+									Dlouhá 3458/2a
 									<br />
-									403 22 Ústí nad Labem
+									400 01 Ústí nad Labem
 									<br />
 									Česká republika
 								</span>
+							</div>
+							<div className='flex items-center group'>
+								<BusinessIcons.business className='w-4 h-4 mr-3 text-brand-primary group-hover:scale-110 transition-transform duration-300' />
+								<span>IČO: 27582787</span>
 							</div>
 							<div className='flex items-center group'>
 								<BusinessIcons.hours className='w-4 h-4 mr-3 text-brand-primary group-hover:scale-110 transition-transform duration-300' />

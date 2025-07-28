@@ -106,9 +106,9 @@ export default function Contact({ className = '' }: ContactProps) {
 										Adresa
 									</h4>
 									<p className='text-gray-600'>
-										Květinová 127, Svádov
+										Dlouhá 3458/2a
 										<br />
-										403 22 Ústí nad Labem
+										400 01 Ústí nad Labem
 										<br />
 										Česká republika
 									</p>

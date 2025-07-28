@@ -9,9 +9,9 @@ export default function StructuredData() {
 			'Specializujeme se na digitalizaci firemních procesů, dokumentů a účetnictví.',
 		address: {
 			'@type': 'PostalAddress',
-			streetAddress: 'Květinová 127, Svádov',
+			streetAddress: 'Dlouhá 3458/2a',
 			addressLocality: 'Ústí nad Labem',
-			postalCode: '403 22',
+			postalCode: '400 01',
 			addressCountry: 'CZ',
 		},
 		contactPoint: {
@@ -35,9 +35,9 @@ export default function StructuredData() {
 		email: 'kancelar@vkurzu.cz',
 		address: {
 			'@type': 'PostalAddress',
-			streetAddress: 'Květinová 127, Svádov',
+			streetAddress: 'Dlouhá 3458/2a',
 			addressLocality: 'Ústí nad Labem',
-			postalCode: '403 22',
+			postalCode: '400 01',
 			addressCountry: 'CZ',
 		},
 		geo: {

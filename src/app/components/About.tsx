@@ -7,36 +7,11 @@ interface AboutProps {
 	className?: string;
 }
 
-interface TeamMemberProps {
-	name: string;
-	role: string;
-	experience: string;
-	avatar: string;
-}
-
 interface CredentialProps {
 	icon: keyof typeof BusinessIcons;
 	title: string;
 	description: string;
 }
-
-const TeamMember: React.FC<TeamMemberProps> = ({
-	name,
-	role,
-	experience,
-	avatar,
-}) => {
-	return (
-		<div className='text-center'>
-			<div className='w-20 h-20 bg-brand-primary rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white'>
-				{avatar}
-			</div>
-			<h4 className='font-semibold text-brand-secondary mb-1'>{name}</h4>
-			<p className='text-brand-primary text-sm mb-2'>{role}</p>
-			<p className='text-gray-600 text-sm'>{experience}</p>
-		</div>
-	);
-};
 
 const Credential: React.FC<CredentialProps> = ({
 	icon,
@@ -59,27 +34,6 @@ const Credential: React.FC<CredentialProps> = ({
 };
 
 export default function About({ className = '' }: AboutProps) {
-	const teamMembers = [
-		{
-			name: 'Ing. Pavel Calderon',
-			role: 'CEO & Founder',
-			experience: '15+ let v IT',
-			avatar: 'PC',
-		},
-		{
-			name: 'Mgr. Anna Nováková',
-			role: 'CTO',
-			experience: '12+ let vývoje',
-			avatar: 'AN',
-		},
-		{
-			name: 'Bc. Tomáš Svoboda',
-			role: 'Lead Developer',
-			experience: '8+ let zkušeností',
-			avatar: 'TS',
-		},
-	];
-
 	const credentials = [
 		{
 			icon: 'certified',
@@ -180,24 +134,6 @@ export default function About({ className = '' }: AboutProps) {
 					</div>
 				</div>
 
-				{/* Team Section */}
-				<div className='text-center mb-16'>
-					<h3 className='text-2xl font-bold text-brand-secondary mb-8'>
-						Náš tým expertů
-					</h3>
-					<div className='grid md:grid-cols-3 gap-8 max-w-4xl mx-auto'>
-						{teamMembers.map((member, _index) => (
-							<TeamMember
-								key={member.name}
-								name={member.name}
-								role={member.role}
-								experience={member.experience}
-								avatar={member.avatar}
-							/>
-						))}
-					</div>
-				</div>
-
 				{/* Founder's Quote */}
 				<div className='bg-gradient-to-r from-brand-primary/5 to-green-500/5 rounded-xl p-8 mb-16 relative overflow-hidden'>
 					{/* Background decoration */}
@@ -206,7 +142,7 @@ export default function About({ className = '' }: AboutProps) {
 
 					<div className='relative z-10 max-w-4xl mx-auto text-center'>
 						<div className='w-20 h-20 bg-brand-primary rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg'>
-							<span className='text-2xl font-bold text-white'>PC</span>
+							<span className='text-2xl font-bold text-white'>JU</span>
 						</div>
 
 						<blockquote className='text-xl md:text-2xl font-medium text-brand-secondary mb-6 italic leading-relaxed'>
@@ -216,7 +152,7 @@ export default function About({ className = '' }: AboutProps) {
 						</blockquote>
 
 						<footer className='text-brand-primary font-semibold'>
-							<cite className='not-italic'>— Ing. Pavel Calderon</cite>
+							<cite className='not-italic'>— Ing. Jan Ullrich</cite>
 							<p className='text-sm text-gray-600 mt-1'>
 								Zakladatel a CEO, Calderon
 							</p>

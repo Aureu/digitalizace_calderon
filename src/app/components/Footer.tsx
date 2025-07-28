@@ -161,7 +161,7 @@ export default function Footer({ className = '' }: FooterProps) {
 						<span className='text-2xl'>🇨🇿</span>
 					</div>
 					<p className='text-gray-300 text-sm max-w-2xl mx-auto leading-relaxed'>
-						Jsme hrdí na český původ a pomáháme česk ým firmám už více než 15
+						Jsme hrdí na český původ a pomáháme česk ým firmám už více než 19
 						let. Naše řešení vznikají s láskou k detailu a porozuměním místnímu
 						trhu.
 					</p>

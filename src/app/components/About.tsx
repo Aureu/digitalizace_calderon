@@ -63,7 +63,7 @@ export default function About({ className = '' }: AboutProps) {
 
 	const achievements = [
 		{ number: '500+', label: 'Úspěšných projektů' },
-		{ number: '15', label: 'Let na trhu' },
+		{ number: '19', label: 'Let na trhu' },
 		{ number: '50+', label: 'Spokojených klientů' },
 		{ number: '99.8%', label: 'Spokojenost klientů' },
 	];
@@ -82,7 +82,7 @@ export default function About({ className = '' }: AboutProps) {
 					<p className='text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4 sm:px-0 leading-relaxed'>
 						Jsme česká technologická společnost s dlouholetou tradicí v oblasti
 						digitalizace. Pomáháme firmám transformovat jejich procesy již více
-						než 15 let.
+						než 19 let.
 					</p>
 				</div>
 
@@ -161,7 +161,7 @@ export default function About({ className = '' }: AboutProps) {
 						<div className='mt-6 flex justify-center items-center space-x-4 text-sm text-gray-500'>
 							<div className='flex items-center space-x-1'>
 								<BusinessIcons.experience className='w-4 h-4 text-brand-primary' />
-								<span>15+ let zkušeností</span>
+								<span>19+ let zkušeností</span>
 							</div>
 							<div className='w-1 h-1 bg-gray-300 rounded-full'></div>
 							<div className='flex items-center space-x-1'>
@@ -206,7 +206,7 @@ export default function About({ className = '' }: AboutProps) {
 						</div>
 						<div className='flex items-center group'>
 							<BusinessIcons.rating className='w-4 h-4 mr-2 text-brand-primary group-hover:scale-110 transition-transform duration-300' />
-							15 let zkušeností
+							19 let zkušeností
 						</div>
 					</div>
 				</div>

@@ -14,9 +14,9 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-	title: 'Digitalizace Calderon - Zefektivněte chod vaší firmy',
+	title: 'Digitalizace Calderon - Zefektivněte chod vaší firmy | Ústí nad Labem',
 	description:
-		'Digitalizujeme dokumenty, procesy a účetnictví. Ušetřete čas a zvyšte efektivitu vaší firmy pomocí moderních digitálních řešení.',
+		'Profesionální digitalizace dokumentů, procesů a účetnictví. Ušetřete až 70% času a zvyšte efektivitu vaší firmy. Bezplatná konzultace. Calderon Czech Republic s.r.o.',
 	keywords: [
 		'digitalizace',
 		'digitalizace dokumentů',
@@ -27,10 +27,16 @@ export const metadata: Metadata = {
 		'digitální transformace',
 		'Ústí nad Labem',
 		'digitalizace firem',
+		'Calderon',
+		'Czech Republic',
+		'úspora času',
+		'firemní procesy',
+		'elektronické dokumenty',
+		'cloud řešení',
 	],
-	authors: [{ name: 'Calderon', url: 'https://calderon.cz' }],
-	creator: 'Calderon',
-	publisher: 'Calderon',
+	authors: [{ name: 'Calderon Czech Republic s.r.o.', url: 'https://calderon.cz' }],
+	creator: 'Calderon Czech Republic s.r.o.',
+	publisher: 'Calderon Czech Republic s.r.o.',
 	robots: {
 		index: true,
 		follow: true,
@@ -48,14 +54,14 @@ export const metadata: Metadata = {
 		url: 'https://calderon.cz',
 		title: 'Digitalizace Calderon - Zefektivněte chod vaší firmy',
 		description:
-			'Digitalizujeme dokumenty, procesy a účetnictví. Ušetřete čas a zvyšte efektivitu vaší firmy pomocí moderních digitálních řešení.',
-		siteName: 'Calderon',
+			'Profesionální digitalizace dokumentů, procesů a účetnictví. Ušetřete až 70% času a zvyšte efektivitu vaší firmy. Bezplatná konzultace.',
+		siteName: 'Calderon Czech Republic s.r.o.',
 		images: [
 			{
-				url: '/images/logo_calderon.png',
+				url: '/images/og-image.png',
 				width: 1200,
 				height: 630,
-				alt: 'Calderon - Digitalizace firemních procesů',
+				alt: 'Digitalizace Calderon - Zefektivněte chod vaší firmy',
 			},
 		],
 	},
@@ -63,14 +69,17 @@ export const metadata: Metadata = {
 		card: 'summary_large_image',
 		title: 'Digitalizace Calderon - Zefektivněte chod vaší firmy',
 		description:
-			'Digitalizujeme dokumenty, procesy a účetnictví. Ušetřete čas a zvyšte efektivitu.',
-		images: ['/images/logo_calderon.png'],
+			'Profesionální digitalizace dokumentů, procesů a účetnictví. Ušetřete až 70% času a zvyšte efektivitu vaší firmy.',
+		images: ['/images/twitter-card.png'],
+		creator: '@calderon_cz',
+		site: '@calderon_cz',
 	},
 	alternates: {
 		canonical: 'https://calderon.cz',
 	},
 	icons: {
 		icon: [
+			{ url: '/favicon.svg', type: 'image/svg+xml' },
 			{ url: '/favicon.png', type: 'image/png' },
 			{ url: '/favicon.ico', type: 'image/x-icon' },
 		],
@@ -81,9 +90,24 @@ export const metadata: Metadata = {
 			{
 				rel: 'mask-icon',
 				url: '/safari-pinned-tab.svg',
-				color: '#b3cf69',
+				color: '#2563eb',
+			},
+			{
+				rel: 'manifest',
+				url: '/manifest.json',
 			},
 		],
+	},
+	metadataBase: new URL('https://calderon.cz'),
+	verification: {
+		google: 'your-google-verification-code',
+		yandex: 'your-yandex-verification-code',
+		me: 'your-me-verification-code',
+	},
+	other: {
+		'google-site-verification': 'your-google-verification-code',
+		'msvalidate.01': 'your-bing-verification-code',
+		'facebook-domain-verification': 'your-facebook-verification-code',
 	},
 };
 

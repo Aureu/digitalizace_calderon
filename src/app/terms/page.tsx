@@ -42,7 +42,7 @@ export default function TermsAndConditions() {
 								<p className='text-gray-700 mb-3'>
 									Tyto obchodní podmínky upravují vzájemná práva a povinnosti mezi
 									společností <strong>Calderon Czech Republic s.r.o.</strong> (dále jen
-									"poskytovatel") a zákazníkem při poskytování služeb digitalizace
+									&quot;poskytovatel&quot;) a zákazníkem při poskytování služeb digitalizace
 									firemních procesů.
 								</p>
 								<div className='bg-gray-50 p-4 rounded-lg'>

@@ -6,7 +6,6 @@ interface ContactFormData {
 	phone?: string;
 	message: string;
 	honeypot?: string; // Hidden field for bots
-	mathAnswer?: string; // Simple math question
 }
 
 // Validation helper
@@ -25,15 +24,7 @@ function validateContactData(data: ContactFormData): {
 		};
 	}
 
-	// Math question validation
-	if (!data.mathAnswer || data.mathAnswer.trim() === '') {
-		errors.push('Prosím odpovězte na ověřovací otázku');
-	} else {
-		const mathAnswer = parseInt(data.mathAnswer.trim());
-		if (isNaN(mathAnswer) || mathAnswer !== 10) {
-			errors.push('Nesprávná odpověď na ověřovací otázku');
-		}
-	}
+
 
 	if (!data.name || data.name.trim().length < 2) {
 		errors.push('Jméno musí mít alespoň 2 znaky');

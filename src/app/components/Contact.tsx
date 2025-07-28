@@ -10,7 +10,6 @@ interface ContactFormData {
 	phone: string;
 	message: string;
 	honeypot?: string; // Hidden field for bots
-	mathAnswer?: string; // Simple math question
 }
 
 interface ContactProps {
@@ -394,45 +393,6 @@ export default function Contact({ className = '' }: ContactProps) {
 									tabIndex={-1}
 									autoComplete='off'
 								/>
-							</div>
-
-							{/* Math question for spam protection */}
-							<div>
-								<label
-									htmlFor='mathAnswer'
-									className='block text-sm font-medium text-gray-700 mb-2'
-								>
-									Ověření: Kolik je 7 + 3? <span className='text-red-500'>*</span>
-								</label>
-								<input
-									type='text'
-									id='mathAnswer'
-									{...register('mathAnswer', {
-										required: 'Prosím odpovězte na otázku',
-										validate: (value) => {
-											if (!value) return 'Prosím odpovězte na otázku';
-											const answer = parseInt(value);
-											return answer === 10 || 'Nesprávná odpověď';
-										},
-									})}
-									className={`w-full px-4 py-3 border rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent ${
-										errors.mathAnswer
-											? 'border-red-500 bg-red-50'
-											: 'border-gray-300 hover:border-gray-400'
-									}`}
-									placeholder='Zadejte výsledek'
-									aria-invalid={errors.mathAnswer ? 'true' : 'false'}
-									aria-describedby={errors.mathAnswer ? 'math-error' : undefined}
-								/>
-								{errors.mathAnswer && (
-									<p
-										id='math-error'
-										className='mt-2 text-sm text-red-600 flex items-center'
-									>
-										<span className='mr-1'>⚠</span>
-										{errors.mathAnswer.message}
-									</p>
-								)}
 							</div>
 
 							{/* Submit Button */}

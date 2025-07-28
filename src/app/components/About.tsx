@@ -175,23 +175,40 @@ export default function About({ className = '' }: AboutProps) {
 				{/* Trust Indicators */}
 				<div className='bg-white rounded-lg p-8 text-center'>
 					<h3 className='text-xl font-bold text-brand-secondary mb-6'>
-						Důvěřují nám
+						Naši partneři
 					</h3>
-					<div className='flex flex-wrap justify-center items-center gap-8 opacity-60'>
-						<div className='text-lg font-semibold text-gray-500'>
-							TechStart s.r.o.
+					<div className='flex flex-wrap justify-center items-center gap-8 opacity-80'>
+						<div className='flex flex-col items-center group hover:opacity-100 transition-opacity duration-300'>
+							<img 
+								src='/images/partners/raynet.svg' 
+								alt='Raynet' 
+								className='h-12 mb-2 group-hover:scale-110 transition-transform duration-300'
+							/>
+							<span className='text-sm text-gray-600'>Raynet</span>
 						</div>
-						<div className='text-lg font-semibold text-gray-500'>
-							ProServis a.s.
+						<div className='flex flex-col items-center group hover:opacity-100 transition-opacity duration-300'>
+							<img 
+								src='/images/partners/make.svg' 
+								alt='Make' 
+								className='h-12 mb-2 group-hover:scale-110 transition-transform duration-300'
+							/>
+							<span className='text-sm text-gray-600'>Make</span>
 						</div>
-						<div className='text-lg font-semibold text-gray-500'>
-							Digital Solutions
+						<div className='flex flex-col items-center group hover:opacity-100 transition-opacity duration-300'>
+							<img 
+								src='/images/partners/ai-association.svg' 
+								alt='Česká asociace umělé inteligence' 
+								className='h-12 mb-2 group-hover:scale-110 transition-transform duration-300'
+							/>
+							<span className='text-sm text-gray-600'>Česká asociace umělé inteligence</span>
 						</div>
-						<div className='text-lg font-semibold text-gray-500'>
-							ModernFirm spol. s r.o.
-						</div>
-						<div className='text-lg font-semibold text-gray-500'>
-							InnovateTech Ltd.
+						<div className='flex flex-col items-center group hover:opacity-100 transition-opacity duration-300'>
+							<img 
+								src='/images/partners/digitoo.svg' 
+								alt='Digitoo.ai' 
+								className='h-12 mb-2 group-hover:scale-110 transition-transform duration-300'
+							/>
+							<span className='text-sm text-gray-600'>Digitoo.ai</span>
 						</div>
 					</div>
 

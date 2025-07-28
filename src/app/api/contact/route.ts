@@ -5,6 +5,8 @@ interface ContactFormData {
 	email: string;
 	phone?: string;
 	message: string;
+	honeypot?: string; // Hidden field for bots
+	mathAnswer?: string; // Simple math question
 }
 
 // Validation helper
@@ -13,6 +15,25 @@ function validateContactData(data: ContactFormData): {
 	errors: string[];
 } {
 	const errors: string[] = [];
+
+	// Honeypot check - if this field is filled, it's likely a bot
+	if (data.honeypot && data.honeypot.trim().length > 0) {
+		errors.push('Spam detekován');
+		return {
+			isValid: false,
+			errors,
+		};
+	}
+
+	// Math question validation
+	if (!data.mathAnswer || data.mathAnswer.trim() === '') {
+		errors.push('Prosím odpovězte na ověřovací otázku');
+	} else {
+		const mathAnswer = parseInt(data.mathAnswer.trim());
+		if (isNaN(mathAnswer) || mathAnswer !== 10) {
+			errors.push('Nesprávná odpověď na ověřovací otázku');
+		}
+	}
 
 	if (!data.name || data.name.trim().length < 2) {
 		errors.push('Jméno musí mít alespoň 2 znaky');

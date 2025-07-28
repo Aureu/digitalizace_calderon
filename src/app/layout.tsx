@@ -51,7 +51,7 @@ export const metadata: Metadata = {
 	openGraph: {
 		type: 'website',
 		locale: 'cs_CZ',
-		url: 'https://calderon.cz',
+		url: 'https://digitalizace.calderon.cz',
 		title: 'Digitalizace Calderon - Zefektivněte chod vaší firmy',
 		description:
 			'Profesionální digitalizace dokumentů, procesů a účetnictví. Ušetřete až 70% času a zvyšte efektivitu vaší firmy. Bezplatná konzultace.',
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
 		site: '@calderon_cz',
 	},
 	alternates: {
-		canonical: 'https://calderon.cz',
+		canonical: 'https://digitalizace.calderon.cz',
 	},
 	icons: {
 		icon: [
@@ -98,7 +98,7 @@ export const metadata: Metadata = {
 			},
 		],
 	},
-	metadataBase: new URL('https://calderon.cz'),
+	metadataBase: new URL('https://digitalizace.calderon.cz'),
 	verification: {
 		google: 'your-google-verification-code',
 		yandex: 'your-yandex-verification-code',

@@ -253,7 +253,7 @@ export default function Contact({ className = '' }: ContactProps) {
 											? 'border-red-500 bg-red-50'
 											: 'border-gray-300 hover:border-gray-400'
 									}`}
-									placeholder='Vaše jméno'
+									placeholder='Jan Novák'
 									aria-invalid={errors.name ? 'true' : 'false'}
 									aria-describedby={errors.name ? 'name-error' : undefined}
 								/>
@@ -291,7 +291,7 @@ export default function Contact({ className = '' }: ContactProps) {
 											? 'border-red-500 bg-red-50'
 											: 'border-gray-300 hover:border-gray-400'
 									}`}
-									placeholder='vas@email.cz'
+									placeholder='jan.novak@firma.cz'
 									aria-invalid={errors.email ? 'true' : 'false'}
 									aria-describedby={errors.email ? 'email-error' : undefined}
 								/>
@@ -329,7 +329,7 @@ export default function Contact({ className = '' }: ContactProps) {
 											? 'border-red-500 bg-red-50'
 											: 'border-gray-300 hover:border-gray-400'
 									}`}
-									placeholder='+420 123 456 789'
+									placeholder='+420 777 218 317'
 									aria-invalid={errors.phone ? 'true' : 'false'}
 									aria-describedby={errors.phone ? 'phone-error' : undefined}
 								/>
@@ -367,7 +367,7 @@ export default function Contact({ className = '' }: ContactProps) {
 											? 'border-red-500 bg-red-50'
 											: 'border-gray-300 hover:border-gray-400'
 									}`}
-									placeholder='Popište vaše potřeby a my vám připravíme řešení na míru...'
+									placeholder='Zajímáme se o digitalizaci našich procesů. Potřebujeme zefektivnit práci s dokumenty a účetnictvím. Prosím o kontakt pro konzultaci.'
 									aria-invalid={errors.message ? 'true' : 'false'}
 									aria-describedby={
 										errors.message ? 'message-error' : undefined

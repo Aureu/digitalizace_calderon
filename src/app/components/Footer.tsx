@@ -36,7 +36,7 @@ export default function Footer({ className = '' }: FooterProps) {
 						</p>
 						<div className='flex space-x-4'>
 							<a
-								href='mailto:kancelar@vkurzu.cz'
+								href='mailto:kancelar@calderon.cz'
 								className='text-brand-primary hover:text-white transition-colors duration-200 p-2 rounded-full hover:bg-white/10 transition-all duration-300'
 								aria-label='Email'
 							>
@@ -111,10 +111,10 @@ export default function Footer({ className = '' }: FooterProps) {
 							<div className='flex items-center group'>
 								<BusinessIcons.email className='w-4 h-4 mr-3 text-brand-primary group-hover:scale-110 transition-transform duration-300' />
 								<a
-									href='mailto:kancelar@vkurzu.cz'
+									href='mailto:kancelar@calderon.cz'
 									className='hover:text-brand-primary transition-colors duration-200'
 								>
-									kancelar@vkurzu.cz
+									kancelar@calderon.cz
 								</a>
 							</div>
 							<div className='flex items-center group'>

@@ -156,7 +156,7 @@ export default function PrivacyPolicy() {
 								</p>
 								<div className='bg-gray-50 p-4 rounded-lg'>
 									<p className='text-gray-700 mb-1'>
-										<strong>Email:</strong> kancelar@vkurzu.cz
+										<strong>Email:</strong> kancelar@calderon.cz
 									</p>
 									<p className='text-gray-700 mb-1'>
 										<strong>Telefon:</strong> +420 474 777 200

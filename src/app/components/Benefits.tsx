@@ -96,7 +96,7 @@ export default function Benefits({ className = '' }: BenefitsProps) {
 		},
 		{
 			icon: 'scalability',
-			title: 'Skalabilita',
+			title: 'Škálovatelnost',
 			description:
 				'Digitální řešení rostou s vaší firmou. Jednoduše přidávejte nové funkce podle potřeb vašeho byznysu.',
 			metric: '∞',

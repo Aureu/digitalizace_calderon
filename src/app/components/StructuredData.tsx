@@ -17,7 +17,7 @@ export default function StructuredData() {
 		contactPoint: {
 			'@type': 'ContactPoint',
 			telephone: '+420474777200',
-			email: 'kancelar@vkurzu.cz',
+			email: 'kancelar@calderon.cz',
 			contactType: 'customer service',
 			availableLanguage: 'Czech',
 		},
@@ -32,7 +32,7 @@ export default function StructuredData() {
 		description: 'Digitalizace dokumentů, procesů a účetnictví pro firmy.',
 		url: 'https://calderon.cz',
 		telephone: '+420474777200',
-		email: 'kancelar@vkurzu.cz',
+		email: 'kancelar@calderon.cz',
 		address: {
 			'@type': 'PostalAddress',
 			streetAddress: 'Dlouhá 3458/2a',

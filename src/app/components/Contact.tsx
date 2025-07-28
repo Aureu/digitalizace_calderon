@@ -138,10 +138,10 @@ export default function Contact({ className = '' }: ContactProps) {
 										Email
 									</h4>
 									<a
-										href='mailto:kancelar@vkurzu.cz'
+										href='mailto:kancelar@calderon.cz'
 										className='text-brand-primary hover:text-brand-secondary transition-colors duration-200'
 									>
-										kancelar@vkurzu.cz
+										kancelar@calderon.cz
 									</a>
 								</div>
 							</div>

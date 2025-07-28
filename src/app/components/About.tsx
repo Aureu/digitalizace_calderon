@@ -175,12 +175,12 @@ export default function About({ className = '' }: AboutProps) {
 				{/* Trust Indicators */}
 				<div className='bg-white rounded-lg p-8 text-center'>
 					<h3 className='text-xl font-bold text-brand-secondary mb-6'>
-						Naši partneři
+						Spolupracujeme s
 					</h3>
 					<div className='flex flex-wrap justify-center items-center gap-8 opacity-80'>
 						<div className='flex flex-col items-center group hover:opacity-100 transition-opacity duration-300'>
 							<img 
-								src='/images/partners/raynet.svg' 
+								src='/images/raynet-e1752841941772.png' 
 								alt='Raynet' 
 								className='h-12 mb-2 group-hover:scale-110 transition-transform duration-300'
 							/>
@@ -188,7 +188,7 @@ export default function About({ className = '' }: AboutProps) {
 						</div>
 						<div className='flex flex-col items-center group hover:opacity-100 transition-opacity duration-300'>
 							<img 
-								src='/images/partners/make.svg' 
+								src='/images/Make-Logo-RGB@2x-1.webp' 
 								alt='Make' 
 								className='h-12 mb-2 group-hover:scale-110 transition-transform duration-300'
 							/>
@@ -196,7 +196,7 @@ export default function About({ className = '' }: AboutProps) {
 						</div>
 						<div className='flex flex-col items-center group hover:opacity-100 transition-opacity duration-300'>
 							<img 
-								src='/images/partners/ai-association.svg' 
+								src='/images/ceska-asociace-umele-inteligence-logo.png' 
 								alt='Česká asociace umělé inteligence' 
 								className='h-12 mb-2 group-hover:scale-110 transition-transform duration-300'
 							/>
@@ -204,7 +204,7 @@ export default function About({ className = '' }: AboutProps) {
 						</div>
 						<div className='flex flex-col items-center group hover:opacity-100 transition-opacity duration-300'>
 							<img 
-								src='/images/partners/digitoo.svg' 
+								src='/images/digitoo2-2.png' 
 								alt='Digitoo.ai' 
 								className='h-12 mb-2 group-hover:scale-110 transition-transform duration-300'
 							/>
